@@ -1,4 +1,5 @@
 function isPalindrome(txt){
+    txt = txt.replace(/[^a-zA-Z0-9]/g, '');
     txt = txt.toUpperCase();
     let cycles = Math.floor(txt.length / 2);
     let pt2 = txt.length - 1;
@@ -10,7 +11,8 @@ function isPalindrome(txt){
         }
         pt2--;
     }
+    console.log(txt)
     return isPalindrome;
 }
 
-console.log(isPalindrome("ciccio"));
+console.log(isPalindrome("race           car"));

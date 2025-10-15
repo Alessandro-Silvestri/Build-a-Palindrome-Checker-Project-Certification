@@ -1,4 +1,5 @@
 function isPalindrome(txt){
+    txt = txt.replace(/[^a-zA-Z0-9]/g, '');
     txt = txt.toUpperCase();
     let cycles = Math.floor(txt.length / 2);
     let pt2 = txt.length - 1;
@@ -10,6 +11,7 @@ function isPalindrome(txt){
         }
         pt2--;
     }
+    console.log(txt)
     return isPalindrome;
 }
 
@@ -24,6 +26,10 @@ check_btn.addEventListener('click', () => {
     }
     else if (isPalindrome(text_input.value)) {
         result.innerHTML = `${text_input.value} is a palindrome`;
+    }
+
+    else {
+        result.innerHTML = `${text_input.value} is not a palindrome`;
     }
 })
 
