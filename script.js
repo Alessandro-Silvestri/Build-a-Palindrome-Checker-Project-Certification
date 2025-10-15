@@ -11,7 +11,6 @@ function isPalindrome(txt){
         }
         pt2--;
     }
-    console.log(txt)
     return isPalindrome;
 }
 
@@ -21,15 +20,14 @@ const result = document.getElementById('result');
 
 check_btn.addEventListener('click', () => {
     if (text_input.value === "") {
-        result.innerHTML = "";
         alert("Please input a value");
     }
     else if (isPalindrome(text_input.value)) {
-        result.innerHTML = `${text_input.value} is a palindrome`;
+        result.innerHTML = text_input.value + "is a palindrome";
     }
 
     else {
-        result.innerHTML = `${text_input.value} is not a palindrome`;
+        result.innerHTML = text_input.value + "is not a palindrome";
     }
 })
 
